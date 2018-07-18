@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+     <title>DownLoad MODIS_Jinping Liu</title>
+     <link type="text/css" rel="stylesheet" href="./funcDate/calendar.css" >
+     <script type="text/javascript" src="./funcDate/calendar.js" ></script>  
+     <script type="text/javascript" src="./funcDate/calendar-zh.js" ></script>
+     <script type="text/javascript" src="./funcDate/calendar-setup.js"></script>
+     <script type="text/javascript" src="./funcURL/jquery.min.js"></script>
+     <form>
+       <script type="text/javascript" src="./funcURL/getFullURL.js"></script>
+     </form>
+   </head>
+   
+   <body>
+   <p><b>请在这里输入完整网址 </b><input type="text" id="site"  value="https://n5eil01u.ecs.nsidc.org/MOSA/MYD10A1.006" style="width:400px" /></p>
+   <p><b>请选择开始时间 </b><input type="text" id="BegTime" name="BegTime" onclick="return showCalendar('BegTime', 'y-mm-dd');"  /></p>
+   <p><b>请选择结束时间 </b><input type="text" id="EndTime" name="EndTime" onclick="return showCalendar('EndTime', 'y-mm-dd');"  /></p>
+   <p><b>请输入时间尺度 </b><input type="text" id="dayScale" name="dayScale" /></p>
+   <p><b>请输入Earthdata用户名 </b><input type="text" id="Account" name="Account" /></p>
+   <p><b>请输入Earthdata密码 </b><input type="password" id="pwd" name="pwd" /></p>
+   <p><b>请输入轨道号(如果多个轨道号请用逗号隔开) </b><input type="text" id="hv" name="hv"  style="width:400px" /></p>
+   <p><b>文件名模糊匹配字符串(如MYD10A1.A) </b><input type="text" id="ppstr" name="ppstr"  style="width:200px" /></p>
+   <p><b>请输入待生成脚本绝对路径 </b><input type="text" id="batScript" name="batScript" style="width:400px" /></p>
+   <input type="button" value="生成脚本文件" onclick="getFullURL()" />
+   <p><strong>注意：</strong><span style="color:red">脚本文件不能与已存在文件重名，否则无法生成!</span></p>
+   <p style="color:red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于系统盘权限原因，请勿将待生成脚本放置C盘位置！</p>
+   <p style="color:red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;很重要**********请使用IE浏览器运行！*************</p>
+   <p style="color:red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于时间原因，界面比较简陋，执行时如有问题，请联系liujp@radi.ac.cn</p>
+   <p id="res" name="res"></p>
+   <p id="over" name="over"></p>
+   </body>
+</html>

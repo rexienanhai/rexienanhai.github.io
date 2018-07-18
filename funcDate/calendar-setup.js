@@ -45,7 +45,7 @@ function showCalendar(id, format) {
     // uncomment the following line to hide the week numbers
     // cal.weekNumbers = false;
     calendar = cal;                  // remember it in the global var
-    cal.setRange(1900, 2200);        // min/max year allowed.//更改起始年月
+    cal.setRange(1900, 2200);        // min/max year allowed.//鏇存敼璧峰骞存湀
     cal.create();
   }
   calendar.setDateFormat(format);    // set the specified date format

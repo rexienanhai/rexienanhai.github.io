@@ -28,7 +28,7 @@ Calendar = function (mondayFirst, dateStr, onSelected, onClose) {
 	this.dateFormat = Calendar._TT["DEF_DATE_FORMAT"];
 	this.ttDateFormat = Calendar._TT["TT_DATE_FORMAT"];
 	this.isPopup = true;
-	this.weekNumbers = false;//true;//²»Òªµ±Ç°ÖÜÈÕÆÚ
+	this.weekNumbers = false;//true;//ä¸è¦å½“å‰å‘¨æ—¥æœŸ
 	this.mondayFirst = mondayFirst;
 	this.dateStr = dateStr;
 	this.ar_days = null;
@@ -423,7 +423,7 @@ Calendar.calDragEnd = function (ev) {
 };
 
 Calendar.dayMouseDown = function(ev) {
-//Ôö¼Óµã»÷Êó±ê¼´¿É¹Ø±Õ¹¦ÄÜ
+//å¢åŠ ç‚¹å‡»é¼ æ ‡å³å¯å…³é—­åŠŸèƒ½
 /*	Calendar.cellClick(Calendar.getElement(ev));
 	if (Calendar.is_ie) {
 		document.selection.empty();
@@ -456,7 +456,7 @@ Calendar.dayMouseDown = function(ev) {
 };
 
 Calendar.dayMouseDblClick = function(ev) {
-return;//×¢ÊÍË«»÷Ğ§¹û;
+return;//æ³¨é‡ŠåŒå‡»æ•ˆæœ;
 	Calendar.cellClick(Calendar.getElement(ev));
 	if (Calendar.is_ie) {
 		document.selection.empty();
@@ -475,7 +475,7 @@ Calendar.dayMouseOver = function(ev) {
 			with (el.calendar.date) {
 				date = new Date(getFullYear(), getMonth(), el.caldate);
 			}
-			el.ttip = "ĞÇÆÚ"+date.print("D")+"  " +date.print("y")+ "Äê "+date.print("M")+date.print("d") +"ÈÕ";
+			el.ttip = "æ˜ŸæœŸ"+date.print("D")+"  " +date.print("y")+ "å¹´ "+date.print("M")+date.print("d") +"æ—¥";
 		}
 		el.calendar.tooltips.firstChild.data = el.ttip;
 	}
@@ -499,7 +499,7 @@ Calendar.dayMouseOut = function(ev) {
 			removeClass(el.parentNode, "rowhilite");
 		}
 		//el.calendar.tooltips.firstChild.data = _TT["SEL_DATE"];
-		//×¢ÊÍÒÆ¿ªÊó±êÊ±µÄÌáÊ¾;ÒòÎªÓÒÉÏ½ÇÒª¸ÄÎªÍ¼Æ¬;
+		//æ³¨é‡Šç§»å¼€é¼ æ ‡æ—¶çš„æç¤º;å› ä¸ºå³ä¸Šè§’è¦æ”¹ä¸ºå›¾ç‰‡;
 		return stopEvent(ev);
 	}
 };
@@ -525,7 +525,7 @@ Calendar.cellClick = function(el) {
 		newdate = true;
 		// a date was clicked
 		cal.dateClicked = true;
-		cal.callCloseHandler();//µ¥»÷Ò²ÒıÓÃ¹Ø±Õ;added by jarry
+		cal.callCloseHandler();//å•å‡»ä¹Ÿå¼•ç”¨å…³é—­;added by jarry
 	} else {
 		if (el.navtype == 200) {
 			Calendar.removeClass(el, "hilite");
@@ -589,7 +589,7 @@ Calendar.cellClick = function(el) {
 		}
 		if (!date.equalsTo(cal.date)) {
 			cal.setDate(date);
-			//alert("²»ÊÇµ±Ç°ÈÕ");
+			//alert("ä¸æ˜¯å½“å‰æ—¥");
 			newdate = true;
 		}
 	}
@@ -655,7 +655,7 @@ Calendar.prototype.create = function (_par) {
 		cell.navtype = navtype;
 		if (text.substr(0, 1) != "&") {
 			if(text.substr(0,5)=="<img ")
-			cell.innerHTML = text;//Èç¹ûÊÇÍ¼Æ¬Ö±½ÓÌí¼Ó;
+			cell.innerHTML = text;//å¦‚æœæ˜¯å›¾ç‰‡ç›´æ¥æ·»åŠ ;
 			else 
 			cell.appendChild(document.createTextNode(text));
 		}
@@ -668,12 +668,12 @@ Calendar.prototype.create = function (_par) {
 	};
 
 //	row = Calendar.createElement("tr", thead);
-//	var title_length = 7;//Ô­ÊÇ6£¬È¥µôÁËÖÜÇĞ»»¹ÊÔö¼ÓÒ»¸ö;
+//	var title_length = 7;//åŸæ˜¯6ï¼Œå»æ‰äº†å‘¨åˆ‡æ¢æ•…å¢åŠ ä¸€ä¸ª;
 //	(this.isPopup) && --title_length;
 //	(this.weekNumbers) && ++title_length;
 
 	//hh("-", 1, 100).ttip = Calendar._TT["TOGGLE"];
-	//È¥µôÖÃÒ»ÖÜÈÕÆÚ
+	//å»æ‰ç½®ä¸€å‘¨æ—¥æœŸ
 	
 	
 
@@ -727,8 +727,8 @@ Calendar.prototype.create = function (_par) {
 
 	if (this.isPopup) {
 		this.title.ttip = Calendar._TT["DRAG_TO_MOVE"];
-		//this.title.style.cursor = "move";//×¢ÊÍÒÆ¶¯×´Ì¬
-		//hh("&#x00d7;", 1, 200).ttip = Calendar._TT["CLOSE"];//È¥µô¹Ø±Õ·û£¬ÒÔÍ¼Æ¬Ìæ´ú;
+		//this.title.style.cursor = "move";//æ³¨é‡Šç§»åŠ¨çŠ¶æ€
+		//hh("&#x00d7;", 1, 200).ttip = Calendar._TT["CLOSE"];//å»æ‰å…³é—­ç¬¦ï¼Œä»¥å›¾ç‰‡æ›¿ä»£;
 		var td_close = hh("<img id=objclose src=\"images/close.gif\">", 1, 200);
 		td_close.ttip = Calendar._TT["CLOSE"];
 		td_close.align = "right";
@@ -742,7 +742,7 @@ Calendar.prototype.create = function (_par) {
 		cell = Calendar.createElement("td", row);
 		cell.className = "name wn";
 		cell.appendChild(document.createTextNode(Calendar._TT["WK"]));
-	//È¥µôÖÜ
+	//å»æ‰å‘¨
 	}
 	for (var i = 7; i > 0; --i) {
 		cell = Calendar.createElement("td", row);
@@ -785,7 +785,7 @@ Calendar.prototype.create = function (_par) {
 	cell.className = "ttip";
 	if (this.isPopup) {
 		cell.ttip = Calendar._TT["DRAG_TO_MOVE"];
-		//cell.style.cursor = "move";//×¢ÊÍÍÏ¶¯×´Ì¬
+		//cell.style.cursor = "move";//æ³¨é‡Šæ‹–åŠ¨çŠ¶æ€
 	}
 	this.tooltips = cell;
 
@@ -991,8 +991,8 @@ Calendar.prototype._init = function (mondayFirst, date) {
 		row = row.nextSibling;
 	}
 	this.ar_days = ar_days;
-//	this.title.firstChild.data = year + "Äê" + Calendar._MN[month];
-	this.title.firstChild.data = year + "Äê";
+//	this.title.firstChild.data = year + "å¹´" + Calendar._MN[month];
+	this.title.firstChild.data = year + "å¹´";
 	this.title2.firstChild.data = Calendar._MN[month];
 	// PROFILE
 	// this.tooltips.firstChild.data = "Generated in " + ((new Date()) - today) + " ms";
@@ -1340,7 +1340,7 @@ Calendar.prototype._dragStart = function (ev) {
 	if (this.dragging) {
 		return;
 	}
-	this.dragging = false;// true;È¥µôÍÏ¶¯
+	this.dragging = false;// true;å»æ‰æ‹–åŠ¨
 	var posX;
 	var posY;
 	if (Calendar.is_ie) {
@@ -1354,7 +1354,7 @@ Calendar.prototype._dragStart = function (ev) {
 	this.xOffs = posX - parseInt(st.left);
 	this.yOffs = posY - parseInt(st.top);
 	with (Calendar) {
-		//addEvent(document, "mousemove", calDragIt);//×¢ÊÍÍÏ¶¯
+		//addEvent(document, "mousemove", calDragIt);//æ³¨é‡Šæ‹–åŠ¨
 		addEvent(document, "mouseover", stopEvent);
 		addEvent(document, "mouseup", calDragEnd);
 	}

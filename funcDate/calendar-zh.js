@@ -38,9 +38,9 @@ Calendar._TT["MON_FIRST"] = "Monday is first showed";
 Calendar._TT["SUN_FIRST"] = "Sunday is first showed";
 Calendar._TT["CLOSE"] = "Close";
 Calendar._TT["TODAY"] = "Today";
-//Calendar._TT["TODAY"] = "";//不要显示今日
+//Calendar._TT["TODAY"] = "";//涓嶈鏄剧ず浠婃棩
 // date formats
 Calendar._TT["DEF_DATE_FORMAT"] = "y-mm-dd";
-Calendar._TT["TT_DATE_FORMAT"] = "D, y M d";
+Calendar._TT["TT_DATE_FORMAT"] = "D,y M d";
 
 Calendar._TT["WK"] = "Week";

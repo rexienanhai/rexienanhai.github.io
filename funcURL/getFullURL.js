@@ -6,9 +6,9 @@ function getDays(date1 , date2)
   var date2Obj = new Date(date2Str[0],(date2Str[1]-1),date2Str[2]);
   var t1 = date1Obj.getTime();
   var t2 = date2Obj.getTime();
-  var dateTime = 1000*60*60*24; //Ã¿Ò»ÌìµÄºÁÃëÊı
-  var minusDays = Math.floor(((t2-t1)/dateTime));//¼ÆËã³öÁ½¸öÈÕÆÚµÄÌìÊı²î
-  var days = Math.abs(minusDays);//È¡¾ø¶ÔÖµ
+  var dateTime = 1000*60*60*24; //æ¯ä¸€å¤©çš„æ¯«ç§’æ•°
+  var minusDays = Math.floor(((t2-t1)/dateTime));//è®¡ç®—å‡ºä¸¤ä¸ªæ—¥æœŸçš„å¤©æ•°å·®
+  var days = Math.abs(minusDays);//å–ç»å¯¹å€¼
   return days;
 }
 
@@ -41,7 +41,7 @@ function getFullURL()
   var endDate=document.getElementById("EndTime").value;
   var account=document.getElementById("Account").value;
   var password=document.getElementById("pwd").value;
-  var batPath=document.getElementById("batScript").value;
+  //var batPath=document.getElementById("batScript").value;
   var hv=document.getElementById("hv").value;
   var pp=document.getElementById("ppstr").value;
   var dayScale=parseInt(document.getElementById("dayScale").value);
@@ -49,9 +49,9 @@ function getFullURL()
   var Month="";
   var test="";
   var Day="";
-  var file=document.getElementById("batScript").value;
+  //var file=document.getElementById("batScript").value;
   var hvs=hv.split(",");
-  var wTool=new ActiveXObject('wscript.shell');
+  //var wTool=new ActiveXObject('wscript.shell');
   var info = ["wget --http-user="," --http-password="," --load-cookies mycookies.txt --save-cookies mycookies.txt --keep-session-cookies -c -r --accept ", " --no-check-certificate --auth-no-challenge -np -e robots=off "];
   var Tdays=getDays(begDate,endDate)+1;
   var ymd=begDate.split("-");
@@ -59,20 +59,20 @@ function getFullURL()
   var yCur="";
   //var ws = new   ActiveXObject("wscript.shell");  
   
-  function dataToTxt(batPath,exportdata)
+  /*function dataToTxt(batPath,exportdata)
 {
             var fso = new ActiveXObject("Scripting.FileSystemObject");
             var s = fso.CreateTextFile(batPath, false);
             s.WriteLine(exportdata);
             s.Close();			
-}
+}*/
 
   var hvStr='"*'+pp+"*."+hvs[0]+'.*.hdf"';
   for(var j=1;j<hvs.length;j++)
   {
      hvStr=hvStr+","+'"*'+pp+"*."+hvs[j]+'.*.hdf"'
   }
-      test="ÕıÔÚÉú³ÉÏÂÔØÁ´½Ó£¬ÇëÉÔºó... <br>" 
+      test="æ­£åœ¨ç”Ÿæˆä¸‹è½½é“¾æ¥ï¼Œè¯·ç¨å... <br>" 
       document.getElementById("res").innerHTML=test;
 
   for(var i=0;i<Tdays;)
@@ -96,7 +96,8 @@ function getFullURL()
       
     }
     //alert(fURL);
-    var x=dataToTxt(batPath,fURL)
-  document.getElementById("over").innerHTML="Éú³É½Å±¾ÎÄ¼ş½áÊø£¬Çë·ÅÔÚwgetÎÄ¼ş¼ĞÏÂÖ´ĞĞ!";
+    //var x=dataToTxt(batPath,fURL)
+  document.getElementById("over").innerHTML="ç”Ÿæˆè„šæœ¬æ–‡ä»¶ç»“æŸï¼Œè¯·å¤åˆ¶åˆ°*.batæ–‡ä»¶ä¸­å¹¶æ”¾åœ¨wgetæ–‡ä»¶å¤¹ä¸‹ç›´æ¥è¿è¡Œå³å¯!";
+  document.getElementById("allRes").value=fURL;
   //ws=null;
 }

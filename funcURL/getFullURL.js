@@ -97,7 +97,7 @@ function getFullURL()
     }
     //alert(fURL);
     //var x=dataToTxt(batPath,fURL)
-  document.getElementById("over").innerHTML='生成脚本文件结束，请复制到*.bat文件中并放在<a href="../tools/wget.zip">wget</a>文件夹下直接运行即可!';
+  document.getElementById("over").innerHTML='生成脚本文件结束，请复制到*.bat文件中并放在<a href="../tools/wget.zip" style="color:red">wget</a>文件夹下直接运行即可!';
   document.getElementById("allRes").value=fURL;
   //ws=null;
 }

@@ -1,5 +1,5 @@
 ﻿@charset "utf-8";
-body{background:url(../images/bg.jpg) no-repeat #121747 fixed;background-size:100% 100%;color:#26ccd4;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+body{background:url() no-repeat #121747 fixed;background-size:100% 100%;color:#26ccd4;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 a{color:#26ccd4;}
 a:hover{color:#15f0fa;}
 
@@ -14,10 +14,10 @@ header{position:fixed;left:230px;top:0;z-index:80;width:calc(100% - 230px);heigh
 }
 
 /*左侧*/
-.sidebar{position:fixed;width:230px;height:100%;background:url(../images/sidebar_bg.png) no-repeat center bottom #0f2153;font-size:12px;background-size:180px auto;z-index:100;}
+.sidebar{position:fixed;width:230px;height:100%;background:url() no-repeat center bottom #0f2153;font-size:12px;background-size:180px auto;z-index:100;}
 
 .people{margin:40px 0 0 40px;width:140px;}
-.people p{width:140px;height:160px;background:url(../images/people_bg.jpg) no-repeat;}
+.people p{width:140px;height:160px;background:url() no-repeat;}
 .people p img{margin:20px 0 0 20px;width:100px;height:120px;}
 .people b{margin-top:10px;display:block;}
 
@@ -31,7 +31,7 @@ header{position:fixed;left:230px;top:0;z-index:80;width:calc(100% - 230px);heigh
 
 .sidebar_line_top{position:absolute;right:0;top:-3px;transform:scale(1,-1);}
 .sidebar_line_foot{position:absolute;right:0;bottom:-3px;}
-.sidebar_line_right{position:absolute;right:0;top:0;width:11px;height:100%;background:url(../images/img02.jpg) no-repeat left center #15f0fa;}
+.sidebar_line_right{position:absolute;right:0;top:0;width:11px;height:100%;background:url() no-repeat left center #15f0fa;}
 
 /*表格*/
 .tab{width:100%;border:1px solid #15f0fa;text-align:center;font-size:12px;border-radius:6px;}
@@ -45,7 +45,7 @@ header{position:fixed;left:230px;top:0;z-index:80;width:calc(100% - 230px);heigh
 .footline{margin-right:100px;}
 
 .space{padding:0 100px;margin:80px 0 40px 0;width:calc(100% - 200px);}
-.space p{width:calc(100% - 600px);height:50px;background:url(../images/img05.png);}
+.space p{width:calc(100% - 600px);height:50px;background:url();}
 .space .right{
 	-moz-transform:scaleX(-1);
     -webkit-transform:scaleX(-1);

@@ -31,7 +31,7 @@ header{position:fixed;left:230px;top:0;z-index:80;width:calc(100% - 230px);heigh
 
 .sidebar_line_top{position:absolute;right:0;top:-3px;transform:scale(1,-1);}
 .sidebar_line_foot{position:absolute;right:0;bottom:-3px;}
-.sidebar_line_right{position:absolute;right:0;top:0;width:11px;height:100%;background:url() no-repeat left center #15f0fa;}
+.sidebar_line_right{position:absolute;right:0;top:0;width:11px;height:100%;background:url() no-repeat left center #808080;}
 
 /*表格*/
 .tab{width:100%;border:1px solid #15f0fa;text-align:center;font-size:12px;border-radius:6px;}

@@ -83,7 +83,7 @@ header{position:fixed;left:230px;top:0;z-index:80;width:calc(100% - 230px);heigh
 
 .shhd_list{margin-bottom:20px;text-align:left;border-bottom:1px solid rgba(0,0,0,0.2);}
 .shhd_list ol{margin:0 0 0 16px;width:calc(100% - 16px);list-style-type:decimal;}
-.shhd_list li{padding-bottom:20px;}
+.shhd_list li{padding-bottom:10px;}
 
 /*时间抽*/
 .timeline{margin:50px 100px;width:calc(100% - 200px);}

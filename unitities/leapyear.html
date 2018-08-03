@@ -17,15 +17,15 @@
      <script type="text/javascript" src="./funcURL/jquery.min.js"></script>
 	 <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
      <form>
-       <script type="text/javascript" src="./funcURL/getFullURL.js"></script>
+       <script type="text/javascript" src="./funcURL/calLeap.js"></script>
      </form>
    </head>
    
    <body style="width:80%;margin-left:10%;">
    <h2 style="text-align:center;font-family:'Times New Roman'"> 闰年计算器</h2>
-   <p><b>请输入待计算年份(如果多个年份请用逗号隔开) </b><input type="text" id="hv" name="hv"  style="padding:10px;width:100%" /></p>
+   <p><b>请输入待计算年份(如果多个年份请用逗号隔开) </b><input type="text" id="yrs" name="yrs"  style="padding:10px;width:100%" /></p>
    <!--<p><b>请输入待生成脚本绝对路径 </b><input type="text" id="batScript" name="batScript" style="width:400px" /></p>-->
-   <input type="button" value="计算闰年" onclick="getFullURL()" class="btn btn-primary"/>
+   <input type="button" value="计算闰年" onclick="calLeap()" class="btn btn-primary"/>
    <br><br>
    <div style="padding:5px 0 0 10px;" class="bg-success">
    <p><strong>注意：</strong><span style="color:red">Developed by <a href="./index.html#jbxx" target="_blank">Dr. Jinping Liu</a></span>，执行时如有问题，请联系<a href="mailto:liujp@radi.ac.cn">liujp@radi.ac.cn</a></p>
@@ -33,7 +33,7 @@
    <p id="res" name="res"></p>
    <p id="over" name="over"></p>
    <div>
-     <textarea name="txt" id="allRes" style="padding:10px;width:100%;height:160px" warp="virtual"></textarea>
+     <textarea name="txt" id="LeapYears" style="padding:10px;width:100%;height:160px" warp="virtual"></textarea>
    </div>
    </body>
    <div>

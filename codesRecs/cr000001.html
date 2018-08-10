@@ -13,12 +13,15 @@
 <![endif]-->
 <script src="./index_files/jquery.js.下载"></script>
 <script src="./index_files/s+.js.下载"></script>
-<style id="pw" type="text/css">
+<style type="text/css">
 		  ul.pw
 		  {
 		    list-style: disc
 		  }
 		  </style>
+ <style type="text/css">
+   span.TNR {font-family:'TIMES NEW Roman'}
+ </style>
 </head>
 <body id="jbxx">
 <header><img src="./index_files/img03.png"></header>
@@ -34,7 +37,7 @@
       <li><a href="../index.html#grjl" style="color:#26ccd4"><b>科研成果</b><i>&nbsp;</i><em>&nbsp;</em></a></li>
       <li><a href="../index.html#sycx" style="color:#26ccd4"><b>实用程序</b><i>&nbsp;</i><em>&nbsp;</em></a></li>
 	  <li><a href="../index.html#codes" style="color:#26ccd4"><b>编程相关</b><i>&nbsp;</i><em>&nbsp;</em></a></li>
-	  li><a href="../index.html#hyjz" style="color:#26ccd4"><b>会议讲座</b><i>&nbsp;</i><em>&nbsp;</em></a></li>
+	  <li><a href="../index.html#hyjz" style="color:#26ccd4"><b>会议讲座</b><i>&nbsp;</i><em>&nbsp;</em></a></li>
 	  <li><a href="../index.html#shsb" style="color:#26ccd4"><b>生活随笔</b><i>&nbsp;</i><em>&nbsp;</em></a></li>
     </ul>
   </menu>
@@ -43,26 +46,39 @@
   <div class="sidebar_line_right">&nbsp;</div>
 </aside>
 <section class="fl mainbady">
-  <div class="fl plate" id="grjl">
+  <div class="fl plate">
     <div class="decorate_left_foot"><img src="./index_files/img07.png"></div>
     <div class="decorate_right_top"><img src="./index_files/img07.png"></div>
     <div class="fl txtinfo" style="font-size:22px">
-      <span>张传荣教授简介及讲座通知</span>
+      <span>WAMP的安装及自定义根目录</span>
     </div>
-    <div style="width:80%;margin:10%;" >
-	  <p style="padding:10px;font-size:20px">
-       <span style="font-weight:bold">报告人：</span>张传荣 教授 （美国康涅狄格大学）<br />
-       <span style="font-weight:bold">报告题目：</span><span style="font-family:'Times New Roman'">Parcel-based urban land use classification in megacity using airborne LiDAR, high resolution orthoimagery, and Google Street View</span><br />
-       <span style="font-weight:bold">时间：</span>2018年7月24日14:00<br />
-       <span style="font-weight:bold">地点：</span>中国科学院新技术园区A612（北京海淀区邓庄南路9号，中国科学院遥感与数字地球研究所）
-	  </p>
-	  <div style="width:90%;margin-left:0">
-	    <img src="./imgs/imgcp1.jpg">
-      </div>		
+    <div style="width:90%;margin:10%;color:#333;font-size:18px;font-family:微软雅黑">
+	  <p style="padding:0 10% 0 0;text-align:center;font-style:italic;">记录时间:2018年8月10日</p><br />
+		<p style="padding:0 10% 0 0;">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WAMP是指Windows下的Apache+Mysql/MariaDB+Perl/PHP/Python，一组常用来搭建动态网站或者服务器的开源软件，本身都是各自独立的程序，但是因为常被放在一起使用，拥有了越来越高的兼容度，共同组成了一个强大的Web应用程序平台。
+		</p>
+		<div style="padding:0 10% 0 0;">
+		<p style="background-color:#B7B7B7;">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;安装完WAMP后，网站的根目录一般是确定的，如果用户想要自定义网站根目录需要更改Apache目录下的httpd.conf文件，打开httpd.conf文件后，定位至Documentroot，修改其后紧跟的目录为用户目录，然后再在后面的<Directory "默认路径">中修改为用户目录，保存；这一步尚未结束，仍需修改Apache目录下的httpd-vhosts.conf文件中的Documentroot和Directory中的路径，方法相同。保存完后，重新启动wamp的所有服务即可。这个时候在用户目录中新建test.php写入测试代码，在浏览器中输入localhost/test.php即可输出测试信息，如果正常输出，则说明配置正确！
+		</p>
+		</div>
+		<p style="padding:0 10% 0 0;">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接着打开wamp的安装目录，需要修改wampmanager.ini和wampmanager.tpl。首先打开wampmanager.ini，定位置Menu.Left中的www 目录，修改路径为用户目录，保存；再打开wampmanager.tpl也定位至Menu.Left中的www 目录，同样将目录修改为用户目录，保存；最后重启wamp的所有服务。
+		</p>
+		<div style="padding:0 10% 0 0;">
+		<p style="background-color:#B7B7B7;">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;至此，操作结束，如果有任何疑问，请在下方评论区留言！
+		</p>
+		</div>
+		
+		<div style="margin:5% 0 0 30%;padding:0 10% 0 0;">
+		<img  src="./imgs/cr00001_1.jpg"/>
+		</div>
+   </div>
 	</div>
     </div>
-  
-  <div class="fl plate">
+	
+     <div class="fl plate">
      <!-- 来必力City版安装代码 -->
 <div  id="lv-container" data-id="city" data-uid="MTAyMC8zODE3Mi8xNDcwMg==" style="width:90%;margin-left:5%;">
 	<script type="text/javascript">
@@ -81,5 +97,5 @@
 <div class="footline"><img class="fr" src="./index_files/img06.png"></div>
   <div class="fl maxbox martop pdtop pdfoot marfoot">&nbsp;</div>
 </section>
-     
+
 </body></html>

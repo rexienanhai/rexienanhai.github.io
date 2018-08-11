@@ -12,6 +12,15 @@
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
 <![endif]-->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700" />
+		<link rel="stylesheet" href="music/css/audioplayer.css" />
+		<script>
+			/*
+				VIEWPORT BUG FIX
+				iOS viewport scaling bug fix, by @mathias, @cheeaun and @jdalton
+			*/
+			(function(doc){var addEvent='addEventListener',type='gesturestart',qsa='querySelectorAll',scales=[1,1],meta=qsa in doc?doc[qsa]('meta[name=viewport]'):[];function fix(){meta.content='width=device-width,minimum-scale='+scales[0]+',maximum-scale='+scales[1];doc.removeEventListener(type,fix,true);}if((meta=meta[meta.length-1])&&addEvent in doc){fix();scales=[.25,1.6];doc[addEvent](type,fix,true);}}(document));
+		</script>
 <script src="./index_files/jquery.js.下载"></script>
 <script src="./index_files/s+.js.下载"></script>
 <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
@@ -22,7 +31,7 @@
 		  }
 		  </style>
 </head>
-<body id="jbxx">
+<body>
 <header><img src="./index_files/img03.png"></header>
 <aside class="sidebar">
   <div class="fl people" style="color:#26ccd4">
@@ -45,9 +54,21 @@
   <div class="sidebar_line_foot"><img src="./index_files/img01.png"></div>
   <div class="sidebar_line_right">&nbsp;</div>
 </aside>
+
 <section class="fl mainbady">
+<div style="padding-left:86%;" id="wrapper">
+			<audio preload="auto" controls>
+				<source src="music/audio/HWAA.mp3">
+				<!--<source src="audio/BlueDucks_FourFlossFiveSix.ogg">
+				<source src="audio/BlueDucks_FourFlossFiveSix.wav">-->
+			</audio>
+			<script src="music/js/jquery.js"></script>
+			<script src="music/js/audioplayer.js"></script>
+			<script>$( function() { $( 'audio' ).audioPlayer(); } );</script>
+
+		</div>
   <!--基本信息-->
-  <div class="fl info">
+  <div class="fl info" id="jbxx">
   <div class="fl txtinfo" style="font-size:22px">
       基本信息
   </div>

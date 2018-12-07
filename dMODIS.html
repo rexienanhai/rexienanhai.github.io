@@ -27,7 +27,7 @@
    <a href="https://www.nasa.gov/" target="_blank"> <img src="./images/NASA.png" style="width:20%;height:20%;" alt="LOGO" class="img-circle" align="right"></a>
    <p><b>请选择开始时间 </b><input type="text" id="BegTime" name="BegTime" onclick="return showCalendar('BegTime', 'y-mm-dd');"  />
    <b>请选择结束时间 </b><input type="text" id="EndTime" name="EndTime" onclick="return showCalendar('EndTime', 'y-mm-dd');"  /></p>
-   <p><b>请输入时间尺度 </b><input type="text" id="dayScale" name="dayScale" /></p>
+   <p><b>请输入时间尺度</b><input type="text" id="dayScale" name="dayScale" />(e.g. 1,8,or 16)</p>
    <p><b>请输入Earthdata用户名 </b><input type="text" id="Account" name="Account" /></p>
    <p><b>请输入Earthdata密码 </b><input type="password" id="pwd" name="pwd" /></p>
    <p><b>请输入轨道号(如果多个轨道号请用逗号隔开) </b><input type="text" id="hv" name="hv"  style="width:400px" /></p>
@@ -39,7 +39,11 @@
    <p><strong>注意：</strong><span style="color:red">Developed by <a href="./index.html#jbxx" target="_blank">Dr. Jinping Liu</a>, and thanks to <a href="http://gaohr.win/About.html" target="_blank">Dr. Huiran Gao</a></span>
    <!--<p style="color:red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于系统盘权限原因，请勿将待生成脚本放置C盘位置！</p>
    <p style="color:red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;很重要**********请使用IE浏览器运行！*************</p>-->
-   <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;执行时如有问题，请联系<a href="mailto:liujp@radi.ac.cn">liujp@radi.ac.cn</a></p>
+   <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;执行时如有问题，请联系<a href="mailto:liujp@radi.ac.cn">liujp@radi.ac.cn</a>
+   <br/>
+   <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red">网址请从下面这两个网址中找到所需要的数据链接：</span>
+   <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://e4ftl01.cr.usgs.gov/MOLT/" target="_blank">MODIS产品网址1</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://n5eil01u.ecs.nsidc.org/MOSA/" target="_blank">MODIS产品网址2</a></p>
    </div>
    <p id="res" name="res"></p>
    <p id="over" name="over"></p>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)http://www.17sucai.com/preview/190870/2018-06-13/xx/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+<meta name="renderer" content="webkit">
+<title>JPLiu | Homepage</title>
+<link rel="stylesheet" href="./index_files/s+.css">
+<link rel="stylesheet" href="./index_files/base.css">
+<link rel="stylesheet" type="text/css" href="./index_files/styles/dark.css"/>
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+<script src="./index_files/jquery.js.下载"></script>
+<script src="./index_files/s+.js.下载"></script>
+<script src="./index_files/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> 
+<style type="text/css">
+		  ul.pw
+		  {
+		    list-style: disc
+		  }
+		  </style>
+ <style type="text/css">
+   span.TNR {font-family:'TIMES NEW Roman'}
+ </style>
+</head>
+<body id="jbxx">
+<header><img src="./index_files/img03.png"></header>
+<aside class="sidebar">
+  <div class="fl people" style="color:#26ccd4">
+    <p><img src="./index_files/dome2.jpg"></p>
+    <b>刘金平</b>
+    <em>中国科学院遥感与数字地球研究所</em>
+  </div>
+  <menu class="fl maxbox menu">
+    <ul>
+      <li><a class="cur" href="../index.html#jbxx" style="color:#26ccd4"><b>基本信息</b><i>&nbsp;</i><em>&nbsp;</em></a></li>
+      <li><a href="../index.html#grjl" style="color:#26ccd4"><b>科研成果</b><i>&nbsp;</i><em>&nbsp;</em></a></li>
+      <li><a href="../index.html#sycx" style="color:#26ccd4"><b>实用程序</b><i>&nbsp;</i><em>&nbsp;</em></a></li>
+	  <li><a href="../index.html#codes" style="color:#26ccd4"><b>编程相关</b><i>&nbsp;</i><em>&nbsp;</em></a></li>
+	  <li><a href="../index.html#hyjz" style="color:#26ccd4"><b>会议讲座</b><i>&nbsp;</i><em>&nbsp;</em></a></li>
+	  <li><a href="../index.html#shsb" style="color:#26ccd4"><b>生活随笔</b><i>&nbsp;</i><em>&nbsp;</em></a></li>
+	  <li><a href="../mypictures/mypics.html" style="color:#26ccd4"><b>照片墙</b><i>&nbsp;</i><em>&nbsp;</em></a></li>
+    </ul>
+  </menu>
+  <div class="sidebar_line_top"><img src="./index_files/img01.png"></div>
+  <div class="sidebar_line_foot"><img src="./index_files/img01.png"></div>
+  <div class="sidebar_line_right">&nbsp;</div>
+</aside>
+<section class="fl mainbady">
+  <div class="fl plate">
+    <div class="decorate_left_foot"><img src="./index_files/img07.png"></div>
+    <div class="decorate_right_top"><img src="./index_files/img07.png"></div>
+    <div class="fl txtinfo" style="font-size:22px">
+      <span>MAPS软件之MySQL安装与配置</span>
+    </div>
+    <div style="width:80%;margin-left:10%;margin-right:10%;color:#333;font-size:16px;font-family:微软雅黑">
+	  <p style="padding:0 0 0 0;text-align:center;font-style:italic;">记录时间:2019年4月16日</p><br />
+		<p style="padding:0 0 0 0;">
+		1. 首先下载<a href="http://3sbbs.cpolar.io//tools/MySQL_MAPS/mysql-8.0.15-winx64.zip" style="color:red;">mysql-8.0.15-winx64</a>，MYSQL刚从5.7版本升到8.0正式版，据说速度提升了2倍并且支持Emojis表情，那我们这边也直接下载MYSQL8.0来进行开发。<br /><br />
+		2. 下载MYSQL可视化工具<a href="http://3sbbs.cpolar.io//tools/MySQL_MAPS/mysql-workbench-community-8.0.15-winx64.msi" style="color:red;">mysql-workbench-community-8.0.15-winx64</a>来进行表的创建查询等操作。
+		</p><br />
+		<pre><code style="margin-right:88%;font-size:14px;font-style:微软雅黑;">MySQL安装</code></pre>
+		<p style="padding:0 0 0 0;">1. 将下载下来的mysql-8.0.11-winx64压缩包解压到常用安装目录下面<br /><br />
+		2. 在MYSQL安装目录下面新建一个配置文件（my.ini）用于配置字符集、端口等信息，配置信息如下</p><br />
+		<pre><code style="font-size:14px;font-style:Times New Roman;">[mysqld]
+# Remove leading # and set to the amount of RAM for the most important data
+# cache in MySQL. Start at 70% of total RAM for dedicated server, else 10%.
+# innodb_buffer_pool_size = 128M
+
+# Remove leading # to turn on a very important data integrity option: logging
+# changes to the binary log between backups.
+# log_bin
+
+# These are commonly set, remove the # and set as required.
+basedir = D:\Program Files\mysql-8.0.15-winx64
+datadir = D:\Program Files\mysql-8.0.15-winx64\data
+port = 3306
+# server_id = .....
+
+# Remove leading # to set options mainly useful for reporting servers.
+# The server defaults are faster for transactions and fast SELECTs.
+# Adjust sizes as needed, experiment to find the optimal values.
+# join_buffer_size = 128M
+# sort_buffer_size = 2M
+# read_rnd_buffer_size = 2M 
+
+sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES 
+
+character-set-server = utf8
+
+performance_schema_max_table_instances = 600
+table_definition_cache = 400
+table_open_cache = 256
+
+[mysql]
+default-character-set = utf8
+
+[mysqld_safe]
+default-character-set = utf8
+
+[client]
+default-character-set = utf8
+		</code></pre>
+		<p style="text-align:justify; text-justify:inter-ideograph;">需要注意的是 basedir 是本地MYSQL的安装目录，datadir 是本地MYSQL数据库存放数据文件的位置，各项配置需要根据自己的环境进行配置。 <br /><br />
+		1. 初始化数据库 <br /><br />
+在MySQL安装目录的bin目录下执行命令，执行完成后，会打印root用户的初始默认密码，在没有更改密码前，需要记住这个密码，后续登录需要用到。要是关快了或者没记住，那也没事，删掉初始化的 datadir 目录，再执行一遍初始化命令，又会重新生成的。当然，也可以使用安全工具，强制改密码，用什么方法，自己随意。<br /><br />
+<div align="center"><img  src="./imgs/01.png"/></div><br /><br />
+
+        2. 安装服务 
+在MySQL安装目录的 bin 目录下执行命令（mysqld –install mysql）.<br />
+命令后面的服务名可以不写，默认的名字为 mysql。安装完成之后，就可以通过命令net start mysql启动MySQL的服务了，由于我这里写的是mysql，所以我这边启动的时候是执行net start mysql。<br /><br />
+<div align="center"><img  src="./imgs/02.png"/><br /><br /><img  src="./imgs/03.png"/></div><br />
+3. 更改密码和密码认证插件
+在MySQL安装目录的 bin 目录下执行命令，这时候会提示输入密码，记住了第2步的密码，填入即可登录成功，进入MySQL命令模式： <br /><br />
+<div align="center"><img  src="./imgs/04.png"/></div><br />
+<p style="text-align:justify; text-justify:inter-ideograph;">在MySQL8.0.4以前，执行SET PASSWORD=PASSWORD(‘[修改的密码]’); 就可以更改密码，但是MySQL8.0.4开始，这样默认是不行的。因为之前，MySQL的密码认证插件是“mysql_native_password”，而现在使用的是“caching_sha2_password”。因为当前有很多数据库工具和链接包都不支持“caching_sha2_password”，为了方便，我暂时还是改回了“mysql_native_password”认证插件。 
+在MySQL中执行命令，修改密码验证插件，同时修改密码：ALTER USER ‘root’@’localhost’ IDENTIFIED WITH mysql_native_password BY ‘password’;其中password修改成你自己需要的密码，比如root:</p><br />
+<div align="center"><img  src="./imgs/05.png"/></div><br />
+<p style="text-align:justify; text-justify:inter-ideograph;">如果想默认使用“mysql_native_password”插件认证，可以在配置文件中配置default_authentication_plugin项。</p>
+		</p> 
+		<pre><code>[mysqld]
+default_authentication_plugin=mysql_native_password</code></pre>
+		<pre><code style="margin-right:80%;font-size:14px;font-style:微软雅黑;">MySQL Workbench安装</code></pre>
+		<p style="text-align:justify; text-justify:inter-ideograph;">双击下载好的mysql-workbench-community-6.3.10-winx64.msi，如果有出现如下提示的话，还需要安装相应的Visual C++2015的包，可以在点OK后弹出的窗口左侧有下载入口，也可以直接访问<a href="https://dev.mysql.com/resources/wb62_prerequisites.html" target="_blank" style="color:blue;">https://dev.mysql.com/resources/wb62_prerequisites.html</a>。</p><br />
+		<div align="center"><img  src="./imgs/06.png"/><br /><br /><img  src="./imgs/07.png"/><br /><br /><img  src="./imgs/08.png"/></div><br />
+		<p>选择相应的安装目录，一步步默认操作即可完成安装。</p><br />
+		<div align="center"><img  src="./imgs/09.png"/></div><br />
+		<pre><code style="margin-right:80%;font-size:14px;font-style:微软雅黑;">可视化连接MYSQL</code></pre>
+		<p>运行这个安装好的MySQL Workbench，你会看到有个默认连接本地的一个入口，点击在弹出窗口中输入之前设置的MYSQL数据库新密码即可 </p>
+		<div align="center"><img  src="./imgs/10.png"/></div>
+		
+		<br />
+		<p style="text-align:justify; text-justify:inter-ideograph;"><strong>特别注意：</strong>如果将MAPS软件的数据库置于远程访问，会涉及到远程访问权限问题。关于更改MySQL用户(比如root)权限，允许外部计算机访问等，请参考<a href="https://blog.csdn.net/qq_40147863/article/details/86485439" style="color:red;" target="_blank">这个链接</a>。</p>
+		
+		<br />
+		<p>转载自<a href="https://blog.csdn.net/ring300/article/details/80432534" target="_blank" style="color:red;">https://blog.csdn.net/ring300/article/details/80432534</a>，并由本站做出了部分修改！</p><br /><br /><br /><br />
+   </div>
+	</div>
+    </div>
+	
+     <div class="fl plate">
+     <!-- 来必力City版安装代码 -->
+<div  id="lv-container" data-id="city" data-uid="MTAyMC8zODE3Mi8xNDcwMg==" style="width:90%;margin-left:5%;">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+       if (typeof LivereTower === 'function') { return; }
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+</div>
+</div>
+<!-- City版安装代码已完成 -->
+<div class="footline"><img class="fr" src="./index_files/img06.png"></div>
+  <div class="fl maxbox martop pdtop pdfoot marfoot">&nbsp;</div>
+</section>
+
+</body></html>

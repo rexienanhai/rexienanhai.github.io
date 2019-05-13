@@ -123,6 +123,11 @@ default-character-set = utf8
 		</p> 
 		<pre><code>[mysqld]
 default_authentication_plugin=mysql_native_password</code></pre>
+
+<p style="font-color:red;">注意：MAPS软件需要在MySQL数据库中初始化两个数据库，分别执行以下两个语句即可：</p>
+<pre><code>CREATE DATABASE MeteoData DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE MeteoData_extens DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;</code></pre>
+
 		<pre><code style="margin-right:78%;font-size:14px;font-style:微软雅黑;">MySQL Workbench安装</code></pre>
 		<p style="text-align:justify; text-justify:inter-ideograph;">双击下载好的mysql-workbench-community-6.3.10-winx64.msi，如果有出现如下提示的话，还需要安装相应的Visual C++2015的包，可以在点OK后弹出的窗口左侧有下载入口，也可以直接访问<a href="https://dev.mysql.com/resources/wb62_prerequisites.html" target="_blank" style="color:blue;">https://dev.mysql.com/resources/wb62_prerequisites.html</a>。</p><br />
 		<div align="center"><img  src="./imgs/06.png"/><br /><br /><img  src="./imgs/07.png"/><br /><br /><img  src="./imgs/08.png"/></div><br />

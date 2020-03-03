@@ -75,32 +75,36 @@
   });
 })(jQuery);
 
-function init(){
+var ifunc=function(){
   var map=new ol.Map({
     target:'map',
     layers:[
     new ol.layer.Tile({
-      title:"okok",
-      source:new ol.sourceXYZ({
-        url:"http://t0.tianditu.com/DataServer?T=vec_w&x={x}&y={y}&l={z}&tk=81fe8a3427000ad3ccd589267c0627d5",
-        attributions:"test",
-        wrapX:false
+      title:"华北水利水电大学",
+      source:new ol.source.XYZ({
+        url:"http://t0.tianditu.com/DataServer?T=img_w&x={x}&y={y}&l={z}&tk=81fe8a3427000ad3ccd589267c0627d5",
+        attributions:"华北水利水电大学",
+        wrapX:true
       }),
       preload:Infinity
     }),
     new ol.layer.Tile({
       title:"okok",
-      source:new ol.sourceXYZ({
-        url:"http://t0.tianditu.com/DataServer?T=cva_w&x={x}&y={y}&l={z}&tk=81fe8a3427000ad3ccd589267c0627d5",
-        attributions:"test",
-        wrapX:false
+      source:new ol.source.XYZ({
+        url:"http://t0.tianditu.com/DataServer?T=cia_w&x={x}&y={y}&l={z}&tk=81fe8a3427000ad3ccd589267c0627d5",
+        attributions:"华北水利水电大学",
+        wrapX:true
       }),
       preload:Infinity
     })
     ],
     view: new ol.View({
-      center:[0,0],
-      zoom:2
+      center:[113.787,34.781],
+      projection:"EPSG:4326",
+      minZoom:16,
+      maxZoom:18,
+      zoom:16
     })
   });
-}
+};
+ifunc();

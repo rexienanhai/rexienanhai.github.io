@@ -74,3 +74,33 @@
     wrapAround: true
   });
 })(jQuery);
+
+function init(){
+  var map=new ol.Map({
+    target:'map',
+    layers:[
+    new ol.layer.Tile({
+      title:"okok",
+      source:new ol.sourceXYZ({
+        url:"http://t0.tianditu.com/DataServer?T=vec_w&x={x}&y={y}&l={z}&tk=81fe8a3427000ad3ccd589267c0627d5",
+        attributions:"test",
+        wrapX:false
+      }),
+      preload:Infinity
+    }),
+    new ol.layer.Tile({
+      title:"okok",
+      source:new ol.sourceXYZ({
+        url:"http://t0.tianditu.com/DataServer?T=cva_w&x={x}&y={y}&l={z}&tk=81fe8a3427000ad3ccd589267c0627d5",
+        attributions:"test",
+        wrapX:false
+      }),
+      preload:Infinity
+    })
+    ],
+    view: new ol.View({
+      center:[0,0],
+      zoom:2
+    })
+  });
+}

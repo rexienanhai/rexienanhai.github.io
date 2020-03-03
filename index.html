@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="assets/css/templatemo-style.css" />
     <link rel="stylesheet" href="assets/css/owl.css" />
     <link rel="stylesheet" href="assets/css/lightbox.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/ol.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
   </head>
 
   <body>
@@ -288,71 +290,7 @@
               >If you want to contact me, please write information at below!</span
             >
           </div>
-          <div class="row">
-            <div class="right-content">
-              <div class="container">
-                <form id="contact" action="mailto:liujp@radi.ac.cn" method="post"> <!---->
-                  <div class="row">
-                    <div class="col-md-6">
-                      <fieldset>
-                        <input
-                          name="name"
-                          type="text"
-                          class="form-control"
-                          id="name"
-                          placeholder="Your name..."
-                          required=""
-                        />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-6">
-                      <fieldset>
-                        <input
-                          name="email"
-                          type="text"
-                          class="form-control"
-                          id="email"
-                          placeholder="Your email..."
-                          required=""
-                        />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <input
-                          name="subject"
-                          type="text"
-                          class="form-control"
-                          id="subject"
-                          placeholder="Subject..."
-                          required=""
-                        />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <textarea
-                          name="body"
-                          rows="6"
-                          class="form-control"
-                          id="message"
-                          placeholder="Your message..."
-                          required=""
-                        ></textarea>
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <button type="submit" id="form-submit" class="button">
-                          Send Message
-                        </button>
-                      </fieldset>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
+          <div id="map"></div>
         </div>
       </section>
       
@@ -361,6 +299,7 @@
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
+    <script type="assets/js/ol.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -368,6 +307,7 @@
     <script src="assets/js/owl-carousel.js"></script>
     <script src="assets/js/lightbox.js"></script>
     <script src="assets/js/custom.js"></script>
+    
     <script>
       //according to loftblog tut
       $(".main-menu li:first").addClass("active");

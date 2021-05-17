@@ -281,8 +281,8 @@ html {
     right: 10%;
     left: 35%;
     position: relative;
-    min-height: 100vh;
-    padding-bottom: 80px;
+    min-height: 75vh;
+    padding-bottom: 50px;
     border-bottom: 3px solid rgba(250, 250, 250, 0.25);
 }
 

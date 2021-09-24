@@ -285,6 +285,9 @@ html {
     padding-bottom: 50px;
     border-bottom: 3px solid rgba(250, 250, 250, 0.25);
 }
+section.my-work {
+    min-height: 1vh;
+}
 
 .section-heading {
     text-align: center;
@@ -525,8 +528,8 @@ section.my-work .section-heading {
 .isotope-item img {
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     border-radius: 5px;
 }
 

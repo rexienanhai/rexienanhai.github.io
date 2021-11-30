@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0070)http://view.jqueryfuns.com/2021/5/11/12f32749aed48714d446d7f844d84791/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>jQuery箭头左右切换图文列表特效 </title>
+
+<link rel="stylesheet" href="./style.css" type="text/css">
+
+</head>
+<body>
+
+<div class="bodyCon08"><!--列表-->
+	<div class="students">
+		
+		  <div id="four_flash">
+			<div class="flashBg">
+				<ul class="mobile">
+					<li>
+						<img src="./technology01.jpg">
+						<dd>极端干旱事件(2021/11/5)</dd>
+						<p>JinPing LIU, he got the Ph.D degree from Remote Sensing and Digital Earth<a href="http://view.jqueryfuns.com/2021/5/11/12f32749aed48714d446d7f844d84791/">More...</a></p>
+					</li>
+					<li>
+						<img src="./life00.jpg">
+						<dd>标题标题标题标题标题</dd>
+						<p>摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要</p>
+						<a href="http://view.jqueryfuns.com/2021/5/11/12f32749aed48714d446d7f844d84791/"></a>
+					</li>
+					<li>
+						<img src="./technology00.jpg">
+						<dd>标题标题标题标题标题</dd>
+						<p>摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要</p>
+						<a href="http://view.jqueryfuns.com/2021/5/11/12f32749aed48714d446d7f844d84791/"></a>
+					</li>
+					<li>
+						<img src="./technology00.jpg">
+						<dd>标题标题标题标题标题</dd>
+						<p>摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要</p>
+						<a href="http://view.jqueryfuns.com/2021/5/11/12f32749aed48714d446d7f844d84791/"></a>
+					</li>
+					<li>
+						<img src="./technology00.jpg">
+						<dd>标题标题标题标题标题</dd>
+						<p>摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要</p>
+						<a href="http://view.jqueryfuns.com/2021/5/11/12f32749aed48714d446d7f844d84791/"></a>
+					</li>
+					<li>
+						<img src="./technology00.jpg">
+						<dd>标题标题标题标题标题</dd>
+						<p>摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要</p>
+						<a href="http://view.jqueryfuns.com/2021/5/11/12f32749aed48714d446d7f844d84791/"></a>
+					</li>
+
+				</ul>
+			</div>
+			<div class="but_left"><img src="./qianxleft.png"></div>
+			<div class="but_right"><img src="./qianxr.png"></div>
+		  </div>
+		  
+	</div>
+</div>
+
+<script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript">
+//学员
+var _index5=0;
+$("#four_flash .but_right img").click(function(){
+	_index5++;
+	var len=$(".flashBg ul.mobile li").length;
+	if(_index5+5>len){
+		$("#four_flash .flashBg ul.mobile").stop().append($("ul.mobile").html());
+	}
+	$("#four_flash .flashBg ul.mobile").stop().animate({left:-_index5*326},1000);
+	});
+
+	
+$("#four_flash .but_left img").click(function(){
+	if(_index5==0){
+		$("ul.mobile").prepend($("ul.mobile").html());
+		$("ul.mobile").css("left","-1380px");
+		_index5=6
+	}
+	_index5--;
+	$("#four_flash .flashBg ul.mobile").stop().animate({left:-_index5*326},1000);
+	});
+</script>	
+
+
+
+</body></html>

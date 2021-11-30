@@ -147,8 +147,9 @@
             >
           </div>
           <div class="scroll">
-            <p style="text-align: center;font-size: 20px;font-family: Times New Roman;">It is being built, see you soon.</p>
-             <!--<p>This is a scrolling are created with the CSS property overflow.</p>  
+            <!----><p style="text-align: center;font-size: 20px;font-family: Times New Roman;">It is being built, see you soon.</p>
+            <!--<iframe src="./Blog.html" id="blog" frameborder="no" scrolling="no"></iframe>
+             <p>This is a scrolling are created with the CSS property overflow.</p>  
              <p><span style="color: red;">This is red color</span> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>  
              <p>This is a normal paragraph.<span style="font-weight: bold; font-size: 22px;">This is big bold text</span>  
              </p>  
@@ -230,7 +231,7 @@
               ><span style="font-style:italic;font-weight:bold;color:#fff;">JinPing LIU</span>, he got the
               Ph.D degree from Remote Sensing and Digital Earth, Chinese Academy of Sciences (CAS) in June, 2019,
 			  primarily occupied in climate change, distributed hydrological modelling, and remote sensing of 
-			  cryosphere. He has been being invited by many journals (e.g., PLOS ONE) as a reviewer.</span
+			  cryosphere. He has been being invited by many journals (e.g., PLOS ONE,Sustainability) as a reviewer.</span
             >
           </div>
 		  <br />
@@ -240,16 +241,32 @@
                 <div class="right-text">
                   <h4>Education</h4>
 				  <p>
-                    September,2019 to present | Working in College of Surving and Geo-informatics, North China University of Water Resources and Electric Power.
+                    September,2019 to present | Working in College of Surving and Geo-informatics, North China University of Water Resources and Electric Power (<a href="https://www.ncwu.edu.cn/" target="_blank" style="color:white">NCWU</a>).
                   </p>
                   <p>
-                    September,2015 to June,2019 | Ph.D in Cartography and Geography Information System (RADI, CAS).
+                    September,2015 to June,2019 | Ph.D in Cartography and Geography Information System (<a href="http://www.aircas.cas.cn/" target="_blank" style="color:white">RADI, CAS</a>).
                   </p>
 				  <p>
-                    September,2012 to June,2015 | Master in Cartography and Geography Information System (EGI, CAS).
+                    September,2012 to June,2015 | Master in Cartography and Geography Information System (<a href="http://www.egi.ac.cn/" target="_blank" style="color:white">EGI, CAS</a>).
                   </p>
 				  <p>
-                    September,2008 to June,2012 | Bachelor in Land Resource Management [Engineering degree](HPU).
+                    September,2008 to June,2012 | Bachelor in Land Resource Management [Engineering degree](<a href="http://www.hpu.edu.cn/www/index.html" target="_blank" style="color:white">HPU</a>).
+                  </p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br />
+      <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="right-text">
+                  <h4>Projects</h4>
+                  <p>
+                    <!--<li>国家科技基础资源调查专项, 20万元，2021-2025，专题负责人，承担</li><br/>-->
+                    <li>华北水利水电大学“高层次人才科研启动项目”, 5万元，2020-2022，承担</li>
                   </p>
 
                 </div>
@@ -375,6 +392,20 @@
 var $i = $("<span/>").text(a[a_idx]); 
 a_idx = (a_idx + 1) % a.length; var x = e.pageX, y = e.pageY;
  $i.css({ "z-index": 99, "top": y - 20, "left": x, "position": "absolute", "font-weight": "bold", "color": "#FF0000","font-size":"26px" }); $("body").append($i); $i.animate({ "top": y - 180, "opacity": 0 }, 1500, function(){ $i.remove(); }); }); });
+ </script>
+ <script type="text/javascript">
+   $(document).ready(function(){
+    $("#blog").load(function(){
+      var iframeHeight;
+      if($(this)[0].contentWindow.getApproveBlogPageHeight){
+        iframeHeight=$(this)[0].contentWindow.getApproveBlogPageHeight();
+      }else{
+        iframeHeight=$(this).contents().height()+40;
+      }
+      $(this).height(iframeHeight<500?500:iframeHeight);
+    });
+    $("#blog").attr("src","./Blog.html");
+   })
  </script>
   </body>
 </html>

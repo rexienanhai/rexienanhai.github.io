@@ -1,5 +1,5 @@
 div.scroll {   
-height: 60px;   
+#height: 280px;   
 width: 100%;   
 overflow: auto;   
 #border: 1px solid #666;   
@@ -10,4 +10,18 @@ padding: 8px;
 	width: 100%;
 	height:56%;
 	position: absolute;
+}
+#iframe-wrap {
+    height: 100%;
+    overflow: visible;
+    position: relative;
+    top: 54px;
+    z-index: 50;
+}
+#blog
+{
+	align:"center";
+	#transform-orign:10% 50%;
+	width:100%;
+	height:500px;
 }
